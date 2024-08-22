@@ -29,7 +29,7 @@
                                     <td>Membre du bureau</td>
                                     <td>0707102515</td>
                                     <td>
-                                        <a href="{{route('secteur.edit')}}" class="btn btn-success" title="Modifier"><i class="feather icon-edit" ></i></a>
+                                        <a href="" class="btn btn-success" title="Modifier"><i class="feather icon-edit" ></i></a>
                                         <a href="" class="btn btn-danger" title="Supprimer"><i class="feather icon-trash-2" ></i></a>
                                     </td>
                                 </tr>
@@ -40,7 +40,7 @@
                                     <td>Agent d'encaissement</td>
                                     <td>0181254698</td>
                                     <td>
-                                        <a href="{{route('secteur.edit')}}" class="btn btn-success" title="Modifier"><i class="feather icon-edit" ></i></a>
+                                        <a href="" class="btn btn-success" title="Modifier"><i class="feather icon-edit" ></i></a>
                                         <a href="" class="btn btn-danger" title="Supprimer"><i class="feather icon-trash-2" ></i></a>
                                     </td>
                                 </tr>
@@ -51,7 +51,7 @@
                                     <td>Agent financier</td>
                                     <td>0151752015</td>
                                     <td>
-                                        <a href="{{route('secteur.edit')}}" class="btn btn-success" title="Modifier"><i class="feather icon-edit" ></i></a>
+                                        <a href="" class="btn btn-success" title="Modifier"><i class="feather icon-edit" ></i></a>
                                         <a href="" class="btn btn-danger" title="Supprimer"><i class="feather icon-trash-2" ></i></a>
                                     </td>
                                 </tr>

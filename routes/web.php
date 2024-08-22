@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContratController;
 use App\Http\Controllers\SecteurController;
@@ -18,27 +19,39 @@ use App\Http\Controllers\PersonnelController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
+Route::middleware(['role:admin'])->group(function () {
 
-Route::prefix('admin/gestion/')->group(function () {
+    // routes pour l'administrateur 
+    Route::prefix('admin/gestion/')->group(function () {
     //routes pour le tableau de bord
-    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+    Route::resource('dashboard', DashboardController::class);
 
     //routes pour les secteurs d'acivités 
-    Route::get('secteur', [SecteurController::class, 'index'])->name('secteur.index');
-    Route::get('secteur/create', [SecteurController::class, 'create'])->name('secteur.create');
-    Route::get('secteur/edit', [SecteurController::class, 'edit'])->name('secteur.edit');
+    Route::resource('secteur', SecteurController::class);
 
-    //routes pour les contrats
-    Route::get('contrat', [ContratController::class, 'index'])->name('contrat.index');
+   
+    Route::resource('contrat', ContratController::class);
 
     //routes pour la gestion de Personnels
-    Route::get('personnels', [PersonnelController::class, 'index'])->name('personnel.index');
-    
+    Route::resource('personnel', PersonnelController::class);
+
     //routes pour la gestion de finances
-    Route::get('finances', [FinancesController::class, 'index'])->name('finance.index');
-    Route::get('finances', [FinancesController::class, 'index'])->name('finance.index');
+    Route::resource('finance', FinancesController::class);
+  });
 });
+
+Route::middleware(['role:user'])->group(function () {
+
+     
+   
+    
+});
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -45,7 +45,7 @@ class SecteurController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit()
+    public function edit($secteur)
     {
         //
         return View('pages.secteur.edit');
