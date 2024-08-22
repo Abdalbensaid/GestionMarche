@@ -8,3 +8,6 @@
 
 <!-- custom-chart js -->
 <script src="{{asset('assets/js/pages/dashboard-main.js')}}"></script>
+
+{{-- form js --}}
+<script src="{{asset('assets/js/pages/form.js')}}"></script>

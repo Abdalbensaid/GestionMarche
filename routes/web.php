@@ -29,6 +29,8 @@ Route::prefix('admin/gestion/')->group(function () {
 
     //routes pour les secteurs d'acivités 
     Route::get('secteur', [SecteurController::class, 'index'])->name('secteur.index');
+    Route::get('secteur/create', [SecteurController::class, 'create'])->name('secteur.create');
+    Route::get('secteur/edit', [SecteurController::class, 'edit'])->name('secteur.edit');
 
     //routes pour les contrats
     Route::get('contrat', [ContratController::class, 'index'])->name('contrat.index');
@@ -37,5 +39,6 @@ Route::prefix('admin/gestion/')->group(function () {
     Route::get('personnels', [PersonnelController::class, 'index'])->name('personnel.index');
     
     //routes pour la gestion de finances
+    Route::get('finances', [FinancesController::class, 'index'])->name('finance.index');
     Route::get('finances', [FinancesController::class, 'index'])->name('finance.index');
 });

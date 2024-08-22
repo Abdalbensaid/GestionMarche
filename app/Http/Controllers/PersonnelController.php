@@ -12,6 +12,7 @@ class PersonnelController extends Controller
     public function index()
     {
         //
+        return View('pages.personnel.index');
     }
 
     /**

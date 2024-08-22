@@ -12,6 +12,8 @@ class SecteurController extends Controller
     public function index()
     {
         //
+        return View('pages.secteur.index');
+
     }
 
     /**
@@ -20,6 +22,8 @@ class SecteurController extends Controller
     public function create()
     {
         //
+        return View('pages.secteur.create');
+
     }
 
     /**
@@ -41,9 +45,11 @@ class SecteurController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit()
     {
         //
+        return View('pages.secteur.edit');
+
     }
 
     /**

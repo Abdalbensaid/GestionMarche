@@ -12,6 +12,8 @@ class FinancesController extends Controller
     public function index()
     {
         //
+        return View('pages.gesfin.index');
+
     }
 
     /**
